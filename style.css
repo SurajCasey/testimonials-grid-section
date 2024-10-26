@@ -1,0 +1,146 @@
+/* Barlow Semi Condensed font family from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600&family=Poppins:ital,wght@0,400;0,500;0,600;1,600&display=swap');
+
+
+
+/*Colors*/
+:root {
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+html{
+    font-size: 13px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--light-grayish-blue);
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2.3rem;
+    row-gap: 1.85rem;
+    max-width: 85.38rem;
+    max-height: 44rem;
+   }
+
+
+/* Grid boxes */
+.testimonial{
+    border-radius: 0.615rem;
+    padding: 2rem 2.46rem 2.46rem 2.46rem;
+}
+
+/* Grid box of Daniel */
+.testimonial-daniel{
+    grid-column: 1/3;
+    background-color: var(--moderate-violet);
+    color: var(--White);
+    background-image: url('./images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position: top 0 right 18%;
+}
+
+.testimonial-jonathon{
+    grid-column: 3/4;
+    background-color: var(--very-dark-grayish-blue);
+    color: var(--White);
+}
+
+.testimonial-jeanette{
+    grid-column: 1/2;
+    background-color: var(--White);
+    color: var(--very-dark-grayish-blue);
+}
+
+.testimonial-patrick{
+    grid-column: 2/4;
+    background-color: var(--very-dark-blackish-blue);
+    color: var(--White);
+}
+
+.testimonial-kira{
+    grid-column: 4/5;
+    grid-row: 1/3;
+    height: auto;
+    background-color: var(--White);
+    color: var(--very-dark-grayish-blue);
+}
+
+img{
+    width: 2.15rem;
+    height: 2.15rem;
+    border-radius: 50%;
+}
+
+header{
+    display: flex;
+    align-items:center;
+    gap: 1.3rem;
+    position: relative;
+}
+
+h2{
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1rem;
+}
+
+.testimonial-summary{
+    font-size: 1.54rem;
+    font-weight: 600;
+    margin-top: 1.38rem;
+    margin-bottom: 1.85rem;
+}
+
+.testimonial-quote{
+    font-size: 1rem;
+    opacity: 70%;
+    line-height: 1.38rem;
+}
+
+header div p{
+    line-height: 0.84rem;
+    font-size: 0.84rem;
+    opacity: 50%;
+    margin-top: 0.3rem;
+}
+
+.testimonial-daniel .testimonial-summary, .testimonial-jonathon .testimonial-summary{
+    margin-bottom: 1.23rem;
+}
+
+@media screen and (max-width: 52rem){
+
+    .testimonial-daniel{
+        background-position: top 0 right 11%;
+    }
+    
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.85rem;
+        margin: 5.5rem 1.85rem;
+        max-height:none;
+    }
+}
+    
